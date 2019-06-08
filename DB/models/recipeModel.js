@@ -1,18 +1,22 @@
 const mongoose = require('../../connection');
 
 const InstructionModel = new mongoose.Schema({
-	steps: [ String ]
+	step: String
 });
 const IngredientModel = new mongoose.Schema({
-	name: String,
-	quantity: Number
+	ingredientName: String,
+	ingredientQuantity: Number,
+	ingredientUnits: String
 });
 
 const RecipeModel = new mongoose.Schema({
 	name: String,
-	hours: Number,
+	image: String,
+	prepTime: String,
+	cookTime: String,
 	servings: Number,
 	mealType: String,
+	dessert: Boolean,
 	ingredients: [ IngredientModel ],
 	instructions: [ InstructionModel ]
 });
