@@ -3,7 +3,7 @@ const router = express.Router();
 const RecipeModel = require('../db/models/recipeModel');
 
 //To get all recipes
-router.get('/', (req, res) => {
+router.get('/all', (req, res) => {
 	RecipeModel.find({}).then((allrecipes) => {
 		res.json(allrecipes);
 	});

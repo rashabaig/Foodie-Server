@@ -21,4 +21,32 @@ const RecipeModel = new mongoose.Schema({
 	instructions: [ InstructionModel ]
 });
 
-module.exports = mongoose.model('Recipe', RecipeModel);
+const DayModel = new mongoose.Schema({
+	breakfast: [ RecipeModel ],
+	lunch: [ RecipeModel ],
+	dinner: [ RecipeModel ]
+});
+const MealPlanModel = new mongoose.Schema({
+	dateRange: String,
+	Monday: [ DayModel ],
+	Tuesday: [ DayModel ],
+	Wednesday: [ DayModel ],
+	Thursday: [ DayModel ],
+	Friday: [ DayModel ]
+});
+
+const GroceryListModel = new mongoose.Schema({
+	list: [ IngredientModel ]
+});
+
+const UserModel = new mongoose.Schema({
+	firstName: String,
+	lastName: String,
+	userName: String,
+	password: String,
+	groceryList: [ GroceryListModel ],
+	mealPlan: [ MealPlanModel ],
+	recipes: [ RecipeModel ]
+});
+
+module.exports = mongoose.model('User', UserModel);
