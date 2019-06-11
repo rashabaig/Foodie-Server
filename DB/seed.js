@@ -1,11 +1,12 @@
-const RecipeModel = require('./models/recipeModel');
 
-const recipeData = require('../db/recipes.json');
+const UserModel = require('./models/userModel');
 
-RecipeModel.remove({}).then(() => {
-	recipeData.map((recipe) => {
-		RecipeModel.create(recipe).then((newRecipe) => {
-			console.log(newRecipe);
+const userData = require('../db/user.json');
+
+UserModel.remove({}).then(() => {
+	userData.map((user) => {
+		UserModel.create(user).then((newUser) => {
+			console.log(newUser);
 		});
 	});
 });

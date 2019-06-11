@@ -7,9 +7,11 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 app.use(cors());
 
-const recipeController = require('./controllers/recipes');
+const userController = require('./controllers/userController');
+const recipeController = require('./controllers/recipeController');
 
-app.use('/api/recipes/', recipeController);
+app.use('/api/foodie/', userController);
+app.use('/api/foodie/recipes/', recipeController);
 
 app.set('port', process.env.PORT || 3001);
 
