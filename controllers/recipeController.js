@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const UserModel = require('../db/models/UserModel');
-const RecipeModel = require('../db/models/recipeModel');
+const RecipeModel = require('../db/models/RecipeModel');
 
 router.put('/newRecipe/:userID', (req, res) => {
 	UserModel.findOneAndUpdate({ _id: req.params.userID })
