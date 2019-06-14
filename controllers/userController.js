@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const UserModel = require('../db/models/userModel');
-const RecipeModel = require('../db/models/recipeModel');
-// const GroceryListModel = require('../db/models/groceryListModel');
-// const MealPlanModel = require('../db/models/mealPlanModel');
+const UserModel = require('../db/models/UserModel')
+
 
 // Creates a new user -- works
 router.post('/newUser', (req, res) => {
