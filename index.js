@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const parser = require('body-parser');
-
-const userController = require('./controllers/userController');
 const recipeController = require('./controllers/recipeController');
+const userController = require('./controllers/userController');
+
 const cors = require('cors');
 
 app.use(parser.json());
