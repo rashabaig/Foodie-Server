@@ -29,11 +29,11 @@ router.delete('/:userID', (req, res) => {
 });
 
 //To Find All Users - works
-router.get('/', (req, res) => {
-	UserModel.find({}).then((allusers) => {
-		res.json(allusers);
-	});
-});
+// router.get('/', (req, res) => {
+// 	UserModel.find({}).then((allusers) => {
+// 		res.json(allusers);
+// 	});
+// });
 
 
 module.exports = router;
