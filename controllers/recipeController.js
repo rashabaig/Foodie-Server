@@ -10,7 +10,8 @@ router.put('/newRecipe/:userID', (req, res) => {
 			RecipeModel.create(req.body).then((recipe) => {
 				console.log(recipe)
 				user.recipes.push(recipe._id);
-				// recipe.save();
+				// recipe.userID = user._id
+				recipe.save();
 				user.save();
 				console.log(user);
 				return res.json(user);
@@ -33,4 +34,14 @@ router.get('/all/:userID', (req, res) => {
 			});
 		})
 })
+
+// router.delete('/:recipeID', (req, res) => {
+// 	RecipeModel.findOneAndDelete({ _id: req.params.recipeID })
+// 		.then(() => {
+// 			return res.sendStatus(200);
+// 		})
+// 		.catch((err) => {
+// 			console.log(err);
+// 		});
+// });
 module.exports = router;
