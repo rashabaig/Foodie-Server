@@ -35,13 +35,5 @@ router.get('/all/:userID', (req, res) => {
 		})
 })
 
-// router.delete('/:recipeID', (req, res) => {
-// 	RecipeModel.findOneAndDelete({ _id: req.params.recipeID })
-// 		.then(() => {
-// 			return res.sendStatus(200);
-// 		})
-// 		.catch((err) => {
-// 			console.log(err);
-// 		});
-// });
+
 module.exports = router;
