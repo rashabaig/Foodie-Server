@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const UserModel = require('../db/models/UserModel')
+const UserModel = require('../db/models/UserModel');
 
 
 // Creates a new user -- works
