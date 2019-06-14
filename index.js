@@ -11,8 +11,8 @@ app.use(cors());
 
 
 
-app.use('/api/foodie/', userController);
-app.use('/api/foodie/recipes/', recipeController);
+app.use('/api/foodie', userController);
+app.use('/api/foodie/recipes', recipeController);
 
 app.set('port', process.env.PORT || 3001);
 

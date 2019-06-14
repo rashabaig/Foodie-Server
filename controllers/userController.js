@@ -3,11 +3,11 @@ const router = express.Router();
 const UserModel = require('../db/models/UserModel');
 
 //To Find All Users - works
-// router.get('/', (req, res) => {
-// 	UserModel.find({}).then((allusers) => {
-// 		res.json(allusers);
-// 	});
-// });
+router.get('/', (req, res) => {
+	UserModel.find({}).then((allusers) => {
+		res.json(allusers);
+	});
+});
 // Creates a new user -- works
 router.post('/newUser', (req, res) => {
 	let newUser = req.body;
